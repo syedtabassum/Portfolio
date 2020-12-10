@@ -1,0 +1,464 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+}
+.cover {
+  background: radial-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)),
+    url(./cover.jpg) no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  width: 100vw;
+}
+.cover .intro {
+  /* min-height: 80vh; */
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  color: rgb(255, 60, 0);
+  font-family: "poppins", sans-serif;
+  font-weight: bolder;
+}
+.cover .intro::before {
+  content: "";
+  position: absolute;
+  bottom: -15%;
+  width: 100%;
+  height: 1px;
+  background-color: white;
+}
+.navbar .navbar-nav li a {
+  color: rgb(255, 60, 0) !important;
+  font-size: 16px;
+  font-family: "poppins", sans-serif;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+.navbar .navbar-nav li a:hover {
+  color: rgb(255, 196, 179) !important;
+}
+.custom-toggler .navbar-toggler-icon {
+  border: none;
+  stroke: rgba(255, 60, 0, 0.1);
+}
+.short-intro {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.intro-text {
+  color: rgb(227, 242, 255);
+  font-size: 3rem;
+}
+.slider {
+  background-color: rgb(55, 1, 75);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateY(100%);
+}
+.hide {
+  background: black;
+  overflow: hidden;
+}
+.hide span {
+  display: inline-block;
+  transform: translateY(100%);
+}
+.heading {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    rgb(94, 94, 94);
+  font-size: 3rem;
+  padding: 3rem;
+  font-family: "Heebo", sans-serif;
+  color: rgb(228, 201, 180);
+}
+.my-work {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    rgb(94, 94, 94) url(./photo.svg) left no-repeat;
+  background-size: contain;
+  position: relative;
+}
+.photography {
+  background: rgb(55, 1, 75);
+  color: white;
+  height: 20rem;
+  width: 30rem;
+  position: absolute;
+  right: 3%;
+  bottom: 30%;
+  padding: 15px;
+}
+.page-no {
+  position: absolute;
+  right: 4%;
+  top: -15%;
+  color: rgb(255, 60, 0);
+}
+.contain {
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contain h3 {
+  font-family: "Heebo", sans-serif;
+}
+.contain a {
+  color: rgb(255, 60, 0);
+  text-decoration: underline;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.cart-work {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    rgb(94, 94, 94) url(./woocommerce.svg) right no-repeat;
+  background-size: contain;
+  position: relative;
+}
+.cart {
+  background: rgb(228, 201, 180);
+  color: rgb(36, 35, 35);
+  height: 20rem;
+  width: 30rem;
+  position: absolute;
+  left: 3%;
+  bottom: 30%;
+  padding: 15px;
+}
+
+.coffee-work {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    rgb(94, 94, 94) url(./coffee.svg) left no-repeat;
+  background-size: contain;
+  position: relative;
+}
+.cafe {
+  background: rgb(32, 35, 121);
+  color: rgb(228, 201, 180);
+  height: 20rem;
+  width: 30rem;
+  position: absolute;
+  right: 3%;
+  bottom: 30%;
+  padding: 15px;
+}
+.skill-button {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    rgb(150, 150, 150);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15vh;
+  width: 100vw;
+}
+.half,
+.skill-set {
+  width: 50%;
+}
+
+.technical-skills {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    rgb(150, 150, 150) url(./tools.svg) left no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: auto;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.item {
+  display: flex;
+  padding: 25px 0px;
+}
+.fab {
+  color: rgb(182, 147, 136);
+  filter: drop-shadow(2px 2px 1px rgb(148, 148, 148));
+  font-size: 60px;
+  line-height: 60px;
+}
+.item img {
+  transform: translateX(-10%) rotate(-45deg);
+}
+h4 {
+  color: white;
+  margin-left: 100px;
+}
+
+.btn {
+  font-size: 25px;
+  border: 1px solid rgb(255, 60, 0);
+  color: rgb(255, 60, 0);
+  font-weight: lighter;
+}
+.btn:hover {
+  background-color: black;
+  color: rgb(255, 60, 0);
+}
+.btn:focus {
+  box-shadow: none;
+}
+.copyright {
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  clear: both;
+  color: rgb(228, 201, 180);
+  font-size: 14px;
+  line-height: 50px;
+  text-align: center;
+  letter-spacing: 0px;
+  text-transform: none;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.my-work,
+.cart-work,
+.coffee-work,
+.technical-skills,
+.copyright {
+  z-index: 3;
+}
+
+/* .............................CONTACT................. */
+.popup {
+  background: rgb(34, 34, 34);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+}
+.contact {
+  min-height: 90vh;
+  width: 90vw;
+  margin: 30px auto;
+  background: #fff url(./contact.svg) right no-repeat;
+  background-size: contain;
+  transition: 0.3s ease-in-out;
+}
+.popup.open {
+  opacity: 1;
+  pointer-events: all;
+}
+.popup h6 {
+  color: #fff;
+  position: absolute;
+  top: 3%;
+  right: 3%;
+  cursor: pointer;
+}
+.reach {
+  margin-left: 15px;
+  color: rgb(150, 150, 150);
+}
+.work {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10%;
+}
+.work h3 {
+  color: rgb(150, 150, 150);
+  margin-top: 10px;
+}
+label {
+  margin-bottom: 8px;
+}
+form {
+  height: 90%;
+  width: 50%;
+  margin: 50px 0px 30px 15px;
+  background: rgb(252, 248, 248);
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 2px 3px 8px rgb(104, 104, 104);
+}
+input,
+textarea {
+  width: 100%;
+  font-size: 16px;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: inset 1px 1px 4px rgb(134, 134, 134),
+    inset -0.5px -0.5px 5px rgb(202, 202, 202);
+}
+input:focus,
+textarea:focus {
+  box-shadow: 1px 1px 4px rgb(134, 134, 134),
+    -0.5px -0.5px 5px rgb(202, 202, 202);
+  outline: none;
+}
+input:focus::placeholder,
+textarea:focus::placeholder {
+  font-size: 12px;
+  position: relative;
+  top: -12px;
+  padding-bottom: 0px;
+  transition: all 0.3s ease-out;
+}
+input::placeholder,
+textarea::placeholder {
+  transition: all 0.3s ease-in;
+}
+
+/* ..............media query.............  */
+
+@media (min-width: 500px) and (max-width: 768px) {
+  .heading {
+    font-size: 2rem;
+    padding: 2rem;
+  }
+  .cafe,
+  .cart,
+  .photography {
+    height: 20rem;
+    width: 30rem;
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+    padding: 1rem;
+  }
+
+  .half {
+    width: 0%;
+  }
+  .skill-set {
+    width: 100%;
+  }
+  .item {
+    display: flex;
+    padding: 15px 0px;
+  }
+  .fab {
+    font-size: 50px;
+    line-height: 50px;
+  }
+  h4 {
+    margin-left: 50px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 574px) {
+  .heading {
+    font-size: 2rem;
+    padding: 2rem;
+  }
+  .cafe,
+  .cart,
+  .photography {
+    height: 20rem;
+    width: 30rem;
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+    padding: 1rem;
+  }
+  .half {
+    width: 0%;
+  }
+  .skill-set {
+    width: 100%;
+  }
+  .item {
+    display: flex;
+    padding: 15px 0px;
+  }
+  .fab {
+    font-size: 50px;
+    line-height: 50px;
+  }
+  h4 {
+    margin-left: 50px;
+  }
+}
+@media (max-width: 479px) {
+  .heading {
+    font-size: 1rem;
+    padding: 1.5rem;
+  }
+  .cafe,
+  .cart,
+  .photography {
+    height: 20rem;
+    width: 20rem;
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+    padding: 0.5rem;
+  }
+  .half {
+    width: 0%;
+  }
+  .skill-set {
+    width: 100%;
+  }
+  .item {
+    display: flex;
+    padding: 15px 0px;
+  }
+  .fab {
+    font-size: 50px;
+    line-height: 50px;
+  }
+  h4 {
+    margin-left: 50px;
+  }
+}
+@media (max-width: 280px) {
+  .heading {
+    font-size: 1rem;
+    padding: 1.5rem;
+  }
+  .cafe,
+  .cart,
+  .photography {
+    height: 20rem;
+    width: 20rem;
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+    padding: 0.5rem;
+  }
+  .half {
+    width: 0%;
+  }
+  .skill-set {
+    width: 100%;
+  }
+  .item {
+    display: flex;
+    padding: 15px 0px;
+  }
+  .fab {
+    font-size: 50px;
+    line-height: 50px;
+  }
+  h4 {
+    margin-left: 50px;
+  }
+}
