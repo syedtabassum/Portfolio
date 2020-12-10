@@ -7,7 +7,7 @@ body {
   overflow-x: hidden;
 }
 .cover {
-  background: radial-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)),
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)),
     url(./cover.jpg) no-repeat;
   background-size: cover;
   min-height: 100vh;
@@ -59,6 +59,7 @@ body {
 .intro-text {
   color: rgb(227, 242, 255);
   font-size: 3rem;
+  z-index: 1;
 }
 .slider {
   background-color: rgb(55, 1, 75);
@@ -68,6 +69,7 @@ body {
   top: 0;
   left: 0;
   transform: translateY(100%);
+  z-index: 1;
 }
 .hide {
   background: black;
@@ -236,8 +238,9 @@ h4 {
 .cart-work,
 .coffee-work,
 .technical-skills,
+.skill-button,
 .copyright {
-  z-index: 3;
+  z-index: 5;
 }
 
 /* .............................CONTACT................. */
@@ -251,11 +254,15 @@ h4 {
   opacity: 0;
   pointer-events: none;
   transition: all 0.3s ease-in-out;
+  z-index: 20;
 }
 .contact {
   min-height: 90vh;
   width: 90vw;
-  margin: 30px auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background: #fff url(./contact.svg) right no-repeat;
   background-size: contain;
   transition: 0.3s ease-in-out;
@@ -263,9 +270,10 @@ h4 {
 .popup.open {
   opacity: 1;
   pointer-events: all;
+  z-index: 20;
 }
 .popup h6 {
-  color: #fff;
+  color: #000;
   position: absolute;
   top: 3%;
   right: 3%;
@@ -273,7 +281,7 @@ h4 {
 }
 .reach {
   margin-left: 15px;
-  color: rgb(150, 150, 150);
+  color: #3f3d56;
 }
 .work {
   display: flex;
@@ -282,7 +290,7 @@ h4 {
   height: 10%;
 }
 .work h3 {
-  color: rgb(150, 150, 150);
+  color: #3f3d56;
   margin-top: 10px;
 }
 label {
@@ -295,7 +303,7 @@ form {
   background: rgb(252, 248, 248);
   padding: 20px 30px;
   border-radius: 8px;
-  box-shadow: 2px 3px 8px rgb(104, 104, 104);
+  box-shadow: 2px 3px 8px rgb(104, 104, 104), -1px -2px 5px #fff;
 }
 input,
 textarea {
@@ -305,12 +313,12 @@ textarea {
   border: none;
   border-radius: 5px;
   box-shadow: inset 1px 1px 4px rgb(134, 134, 134),
-    inset -0.5px -0.5px 5px rgb(202, 202, 202);
+    inset -0.5px -0.5px 5px rgb(245, 245, 245);
 }
 input:focus,
 textarea:focus {
   box-shadow: 1px 1px 4px rgb(134, 134, 134),
-    -0.5px -0.5px 5px rgb(202, 202, 202);
+    -0.5px -0.5px 5px rgb(245, 245, 245);
   outline: none;
 }
 input:focus::placeholder,
@@ -333,6 +341,16 @@ textarea::placeholder {
     font-size: 2rem;
     padding: 2rem;
   }
+  .my-work,
+  .cart-work,
+  .coffee-work {
+    background-position: top left;
+  }
+  .contain h1,
+  .contain h3,
+  .contain a {
+    font-size: 100%;
+  }
   .cafe,
   .cart,
   .photography {
@@ -341,6 +359,7 @@ textarea::placeholder {
     position: absolute;
     right: 0%;
     bottom: 0%;
+    left: unset;
     padding: 1rem;
   }
 
@@ -349,6 +368,11 @@ textarea::placeholder {
   }
   .skill-set {
     width: 100%;
+    padding: 5px 50px;
+  }
+  .technical-skills {
+    background-position: top right;
+    background-size: contain;
   }
   .item {
     display: flex;
@@ -360,6 +384,13 @@ textarea::placeholder {
   }
   h4 {
     margin-left: 50px;
+  }
+  form {
+    width: 80%;
+    margin: 25px auto;
+  }
+  .contact {
+    background-position: bottom right;
   }
 }
 
@@ -368,6 +399,16 @@ textarea::placeholder {
     font-size: 2rem;
     padding: 2rem;
   }
+  .my-work,
+  .cart-work,
+  .coffee-work {
+    background-position: top left;
+  }
+  .contain h1,
+  .contain h3,
+  .contain a {
+    font-size: 95%;
+  }
   .cafe,
   .cart,
   .photography {
@@ -376,6 +417,7 @@ textarea::placeholder {
     position: absolute;
     right: 0%;
     bottom: 0%;
+    left: unset;
     padding: 1rem;
   }
   .half {
@@ -383,6 +425,7 @@ textarea::placeholder {
   }
   .skill-set {
     width: 100%;
+    padding: 5px 45px;
   }
   .item {
     display: flex;
@@ -394,6 +437,13 @@ textarea::placeholder {
   }
   h4 {
     margin-left: 50px;
+  }
+  form {
+    width: 80%;
+    margin: 25px auto;
+  }
+  .contact {
+    background-position: bottom right;
   }
 }
 @media (max-width: 479px) {
@@ -401,6 +451,16 @@ textarea::placeholder {
     font-size: 1rem;
     padding: 1.5rem;
   }
+  .my-work,
+  .cart-work,
+  .coffee-work {
+    background-position: top left;
+  }
+  .contain h1,
+  .contain h3,
+  .contain a {
+    font-size: 95%;
+  }
   .cafe,
   .cart,
   .photography {
@@ -409,6 +469,7 @@ textarea::placeholder {
     position: absolute;
     right: 0%;
     bottom: 0%;
+    left: unset;
     padding: 0.5rem;
   }
   .half {
@@ -416,6 +477,7 @@ textarea::placeholder {
   }
   .skill-set {
     width: 100%;
+    padding: 5px 45px;
   }
   .item {
     display: flex;
@@ -427,6 +489,13 @@ textarea::placeholder {
   }
   h4 {
     margin-left: 50px;
+  }
+  form {
+    width: 80%;
+    margin: 25px auto;
+  }
+  .contact {
+    background-position: bottom right;
   }
 }
 @media (max-width: 280px) {
@@ -434,6 +503,16 @@ textarea::placeholder {
     font-size: 1rem;
     padding: 1.5rem;
   }
+  .my-work,
+  .cart-work,
+  .coffee-work {
+    background-position: top left;
+  }
+  .contain h1,
+  .contain h3,
+  .contain a {
+    font-size: 90%;
+  }
   .cafe,
   .cart,
   .photography {
@@ -442,6 +521,7 @@ textarea::placeholder {
     position: absolute;
     right: 0%;
     bottom: 0%;
+    left: unset;
     padding: 0.5rem;
   }
   .half {
@@ -449,6 +529,7 @@ textarea::placeholder {
   }
   .skill-set {
     width: 100%;
+    padding: 5px 30px;
   }
   .item {
     display: flex;
@@ -460,5 +541,12 @@ textarea::placeholder {
   }
   h4 {
     margin-left: 50px;
+  }
+  form {
+    width: 80%;
+    margin: 25px auto;
+  }
+  .contact {
+    background-position: bottom right;
   }
 }
