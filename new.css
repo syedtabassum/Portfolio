@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   overflow-x: hidden;
 }
@@ -14,22 +13,26 @@ body {
   background-color: #3f3d56;
   color: #afadc7;
 }
-
 /* /////////////////////////////       font family       /////////////////////// */
 .my-projects,
 .technical-skills h2 {
   font-family: "Poppins", sans-serif;
 }
-/* .photo-section,
+.photo-section,
 .cart-content,
 .cafe-section,
 .description p {
   font-family: "Montserrat", sans-serif;
-} */
+}
 
 /* .....................cover div................... */
 .cover {
-  background: url(./cover-2.jpg) center no-repeat;
+  background: linear-gradient(
+      180deg,
+      rgba(204, 191, 179, 0.9) 0%,
+      rgba(199, 181, 161, 0.9) 100%
+    ),
+    url(./cover-2.jpg) center no-repeat;
   background-size: cover;
   min-height: 100vh;
   width: 100vw;
@@ -104,8 +107,8 @@ img {
   height: 120vh;
   background: linear-gradient(
     180deg,
-    rgb(253, 253, 253) 0%,
-    rgb(212, 216, 223) 100%
+    rgb(199, 181, 161) 0%,
+    rgb(214, 209, 204) 100%
   );
   overflow: hidden;
 }
@@ -152,8 +155,8 @@ img {
   height: auto;
   background: linear-gradient(
     180deg,
-    rgb(212, 216, 223) 0%,
-    rgb(253, 253, 253) 100%
+    rgb(214, 209, 204) 0%,
+    rgb(199, 181, 161) 100%
   );
 }
 .cart-section img {
@@ -184,16 +187,12 @@ img {
   width: 100vw;
   background: linear-gradient(
     180deg,
-    rgb(253, 253, 253) 0%,
-    rgb(212, 216, 223) 100%
+    rgb(199, 181, 161) 0%,
+    rgb(214, 209, 204) 100%
   );
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .cafe-section img {
-  width: 500px;
-  height: 500px;
+  width: 700px;
 }
 
 /* ....................................BRFORE PAGE  NUM.............. */
@@ -291,75 +290,75 @@ img {
 }
 /* ........................................CONTACT................. */
 /* .popup {
-  width: 100vw;
-  height: 100vh;
-}
-.contact {
-  min-height: 90vh;
-  width: 90vw;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  background: #fff;
-  transform: translate(-50%, -50%);
-  transition: 0.3s ease-in-out;
-  overflow-y: scroll;
-}
-.reach {
-  margin-left: 15px;
-  color: #3f3d56;
-}
-.work {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 10%;
-}
-.work h3 {
-  color: #3f3d56;
-  padding: 20px;
-  font-family: "poppins", sans-serif;
-}
-label {
-  margin-bottom: 8px;
-}
-form {
-  height: 90%;
-  width: 50%;
-  margin: 50px 0px 30px 15px;
-  background: rgb(252, 248, 248);
-  padding: 20px 30px;
-  border-radius: 8px;
-  box-shadow: 2px 3px 8px rgb(104, 104, 104), -1px -2px 5px #fff;
-}
-input,
-textarea {
-  width: 100%;
-  font-size: 16px;
-  padding: 8px;
-  border: none;
-  border-radius: 5px;
-  box-shadow: inset 1px 1px 4px rgb(134, 134, 134),
-    inset -0.5px -0.5px 5px rgb(245, 245, 245);
-}
-input:focus,
-textarea:focus {
-  box-shadow: 1px 1px 4px rgb(134, 134, 134),
-    -0.5px -0.5px 5px rgb(245, 245, 245);
-  outline: none;
-}
-input:focus::placeholder,
-textarea:focus::placeholder {
-  font-size: 12px;
-  position: relative;
-  top: -12px;
-  padding-bottom: 0px;
-  transition: all 0.3s ease-out;
-}
-input::placeholder,
-textarea::placeholder {
-  transition: all 0.3s ease-in;
-} */
+    width: 100vw;
+    height: 100vh;
+  }
+  .contact {
+    min-height: 90vh;
+    width: 90vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: #fff;
+    transform: translate(-50%, -50%);
+    transition: 0.3s ease-in-out;
+    overflow-y: scroll;
+  }
+  .reach {
+    margin-left: 15px;
+    color: #3f3d56;
+  }
+  .work {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+  }
+  .work h3 {
+    color: #3f3d56;
+    padding: 20px;
+    font-family: "poppins", sans-serif;
+  }
+  label {
+    margin-bottom: 8px;
+  }
+  form {
+    height: 90%;
+    width: 50%;
+    margin: 50px 0px 30px 15px;
+    background: rgb(252, 248, 248);
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 2px 3px 8px rgb(104, 104, 104), -1px -2px 5px #fff;
+  }
+  input,
+  textarea {
+    width: 100%;
+    font-size: 16px;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: inset 1px 1px 4px rgb(134, 134, 134),
+      inset -0.5px -0.5px 5px rgb(245, 245, 245);
+  }
+  input:focus,
+  textarea:focus {
+    box-shadow: 1px 1px 4px rgb(134, 134, 134),
+      -0.5px -0.5px 5px rgb(245, 245, 245);
+    outline: none;
+  }
+  input:focus::placeholder,
+  textarea:focus::placeholder {
+    font-size: 12px;
+    position: relative;
+    top: -12px;
+    padding-bottom: 0px;
+    transition: all 0.3s ease-out;
+  }
+  input::placeholder,
+  textarea::placeholder {
+    transition: all 0.3s ease-in;
+  } */
 /* .....................................contact II ........................... */
 .popup {
   height: 130vh;
@@ -368,16 +367,11 @@ textarea::placeholder {
 .popup .copyright {
   box-shadow: none;
 }
-.contact h3 {
-  padding: 5px;
-}
 .contact {
-  height: auto;
+  height: 95vh;
   width: 90vw;
   background-color: rgb(235, 235, 235);
   border-radius: 20px;
-  padding: 30px;
-  font-family: "poppins", sans-serif;
 }
 label {
   margin-bottom: 8px;
@@ -387,7 +381,6 @@ form {
   width: 700px;
   padding: 20px 30px;
   border-radius: 8px;
-  z-index: 4;
 }
 input,
 textarea {
@@ -424,9 +417,8 @@ textarea::placeholder {
   background-size: contain;
   height: 400px;
   width: 400px;
-  z-index: 1;
 }
-.popup .submit {
+button {
   display: block;
   width: 100%;
   outline: none;
@@ -437,7 +429,6 @@ textarea::placeholder {
   background-color: #3f3d56;
   color: white;
 }
-
 /* .....................................media query.............  */
 
 @media (min-width: 500px) and (max-width: 768px) {
@@ -459,12 +450,12 @@ textarea::placeholder {
   .page-no h4 {
     font-size: 20px;
   }
-  /* .navbar .navbar-nav li a {
+  .navbar .navbar-nav li a {
     background-color: #3f3d56;
     color: #afadc7 !important;
     width: 50%;
     margin: auto;
-  } */
+  }
   form {
     width: 80%;
     margin: 25px auto;
@@ -501,15 +492,6 @@ textarea::placeholder {
     color: #afadc7 !important;
     width: 50%;
     margin: auto;
-  }
-  .photo-section img,
-  .cafe-section img {
-    width: 300px;
-    height: 300px;
-  }
-  h4,
-  .description p {
-    font-size: 20px;
   }
 
   form {
@@ -551,17 +533,5 @@ textarea::placeholder {
     height: 60%;
     width: 90%;
     font-size: 30px;
-  }
-  .contact {
-    padding: 10px 0px;
-  }
-  .popup h3,
-  .popup h5,
-  label,
-  textarea {
-    font-size: 14px;
-  }
-  .contact ::placeholder {
-    font-size: 12px;
   }
 }
