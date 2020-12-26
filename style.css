@@ -20,6 +20,13 @@ body {
 .technical-skills h2 {
   font-family: "Poppins", sans-serif;
 }
+/* .pic,
+.pic2 {
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
 /* .photo-section,
 .cart-content,
 .cafe-section,
@@ -28,6 +35,7 @@ body {
 } */
 
 /* .....................cover div................... */
+
 .cover {
   background: url(./cover-2.jpg) center no-repeat;
   background-size: cover;
@@ -234,19 +242,22 @@ img {
 .technical-skills {
   position: relative;
 }
+.technical-skills a {
+  text-decoration: none;
+}
 .bg-effect {
   height: 100vh;
   width: 100vw;
-  background: url(./img/skills.jpg) no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(./img/skills.jpg) no-repeat;
   background-size: cover;
-  filter: blur(6px);
 }
 .description {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.5);
   color: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
@@ -274,6 +285,9 @@ img {
 .description button:hover {
   color: black;
   background-color: rgba(255, 255, 255, 0.3);
+}
+.description button:focus {
+  outline: none;
 }
 /* .....................................copyright............ */
 .copyright {
@@ -448,6 +462,7 @@ textarea::placeholder {
     font-size: 30px;
     height: 60vh;
   }
+
   .my-projects {
     font-size: 25px;
   }
@@ -459,12 +474,7 @@ textarea::placeholder {
   .page-no h4 {
     font-size: 20px;
   }
-  /* .navbar .navbar-nav li a {
-    background-color: #3f3d56;
-    color: #afadc7 !important;
-    width: 50%;
-    margin: auto;
-  } */
+
   form {
     width: 80%;
     margin: 25px auto;
@@ -478,6 +488,7 @@ textarea::placeholder {
   .cover {
     background-position: right;
   }
+
   .navbar .navbar-nav li a {
     background-color: #3f3d56;
     color: #afadc7 !important;
@@ -495,6 +506,9 @@ textarea::placeholder {
 @media (max-width: 479px) {
   .cover {
     background-position: right;
+  }
+  .cover .intro {
+    font-size: 25px;
   }
   .navbar .navbar-nav li a {
     background-color: #3f3d56;
@@ -528,6 +542,7 @@ textarea::placeholder {
   .cover {
     background-position: right;
   }
+
   .navbar .navbar-nav li a {
     background-color: #3f3d56;
     color: #afadc7 !important;
