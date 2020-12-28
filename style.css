@@ -440,7 +440,7 @@ textarea::placeholder {
 .right {
   height: 100%;
   width: 100%;
-  background: url(./contact.svg) no-repeat center center;
+  background: url(./img/contact.svg) no-repeat center center;
   background-size: contain;
   height: 400px;
   width: 400px;
