@@ -14,19 +14,25 @@ body {
   background-color: #3f3d56;
   color: #afadc7;
 }
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
 
 /* /////////////////////////////       font family       /////////////////////// */
 .my-projects,
 .technical-skills h2 {
   font-family: "Poppins", sans-serif;
 }
-/* .pic,
+.pic,
 .pic2 {
-  background-color: #000;
   display: flex;
   justify-content: center;
   align-items: center;
-} */
+}
+h4 {
+  font-weight: lighter;
+}
 /* .photo-section,
 .cart-content,
 .cafe-section,
@@ -102,10 +108,10 @@ body {
   transform: translateY(100%);
 }
 /* ..............................PHOTO SECTION............... */
-img {
+/* img {
   height: 100%;
   width: 100%;
-}
+} */
 
 .photo-section {
   width: 100vw;
@@ -495,6 +501,9 @@ textarea::placeholder {
     width: 50%;
     margin: auto;
   }
+  .description p {
+    font-size: 18px;
+  }
   form {
     width: 90%;
     margin: 25px auto;
@@ -521,9 +530,14 @@ textarea::placeholder {
     width: 300px;
     height: 300px;
   }
-  h4,
-  .description p {
+  .photo-section h1 {
+    font-size: 24px;
+  }
+  h4 {
     font-size: 20px;
+  }
+  .description p {
+    font-size: 16px;
   }
 
   form {
@@ -549,9 +563,18 @@ textarea::placeholder {
     width: 50%;
     margin: auto;
   }
+  .cart-section img,
+  .photo-section img,
+  .cafe-section img {
+    height: 200px;
+    width: 200px;
+  }
   .description {
     height: 60%;
     width: 90%;
+  }
+  .description p {
+    font-size: 16px;
   }
   form {
     width: 90%;
