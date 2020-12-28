@@ -525,6 +525,9 @@ textarea::placeholder {
     width: 50%;
     margin: auto;
   }
+  .cafe-section {
+    height: 120vh;
+  }
   .photo-section img,
   .cafe-section img {
     width: 300px;
